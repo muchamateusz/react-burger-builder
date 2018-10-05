@@ -3,7 +3,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // App
-import Aux from '../../hoc/Aux';
 
 // Local
 import './Layout.less';
@@ -13,10 +12,10 @@ const propTypes = {
 };
 
 const Layout = ({ children, ...rest }) => (
-  <Aux>
+  <React.Fragment>
     <div>Toolbar, SideDrawer, Backdrop</div>
     <main>{children}</main>
-  </Aux>
+  </React.Fragment>
 );
 
 Layout.propTypes = propTypes;
