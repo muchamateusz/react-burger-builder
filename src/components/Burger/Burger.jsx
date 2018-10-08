@@ -18,7 +18,7 @@ const Burger = ({ ingredients, ...rest }) => {
     )
     .reduce((arr, el) => arr.concat(el), []);
   return (
-    <div className="Burger" {...rest}>
+    <div className="burger" {...rest}>
       <BurgerIngredient type="bread-top" />
       {transformedIngredients.length > 0 ? (
         transformedIngredients
