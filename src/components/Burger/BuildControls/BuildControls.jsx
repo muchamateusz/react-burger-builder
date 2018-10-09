@@ -14,16 +14,19 @@ const BuildControls = ({
   ingredientAdded,
   ingredientRemoved,
   ...rest
-}) =>
-  controls.map((ing, index) => (
-    <BuildControlsItem
-      key={ing + index}
-      label={ing}
-      added={() => ingredientAdded(ing)}
-      removed={() => ingredientRemoved(ing)}
-      disabled={disabled[ing]}
-    />
-  ));
+}) => (
+  <div className="build-controls">
+    {controls.map((ing, index) => (
+      <BuildControlsItem
+        key={ing + index}
+        label={ing}
+        added={() => ingredientAdded(ing)}
+        removed={() => ingredientRemoved(ing)}
+        disabled={disabled[ing]}
+      />
+    ))}
+  </div>
+);
 
 BuildControls.propTypes = {
   defaultProp: PropTypes.string
