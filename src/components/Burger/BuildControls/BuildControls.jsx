@@ -4,18 +4,25 @@ import PropTypes from "prop-types";
 
 // APP
 import BuildControlsItem from "./BuildControlsItem/BuildControlsItem";
+import Button from "../../../common-components/Button/Button";
 
 // MODULE
 import "./BuildControls.less";
 
 const BuildControls = ({
   disabled,
+  purchasable,
   controls,
+  price,
+  handleOrder,
   ingredientAdded,
   ingredientRemoved,
   ...rest
 }) => (
   <div className="build-controls">
+    <p>
+      Total price: <strong>{price.toFixed(2)}</strong> PLN
+    </p>
     {controls.map((ing, index) => (
       <BuildControlsItem
         key={ing + index}
@@ -25,6 +32,11 @@ const BuildControls = ({
         disabled={disabled[ing]}
       />
     ))}
+    <Button
+      disabled={!purchasable}
+      type="order"
+      onClick={handleOrder}
+    >ORDER NOW</Button>
   </div>
 );
 
