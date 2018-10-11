@@ -15,7 +15,6 @@ const OrderSummary = ({
       ingredients[ingKey]
     }`}</li>
   ));
-  console.log("cancelPurchaseHandler :", cancelPurchaseHandler);
   return (
     <React.Fragment>
       <h3>Your Order</h3>
