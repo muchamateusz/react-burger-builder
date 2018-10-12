@@ -10,15 +10,19 @@ import DarkOverlay from "../../../common-components/DarkOverlay/DarkOverlay";
 // MODULE
 import "./SideDrawer.less";
 
-const SideDrawer = ({ open, closed, ...rest }) => {
+const SideDrawer = ({ menuOpened, toggleMenu, ...rest }) => {
   return (
     <React.Fragment>
-      <DarkOverlay show={open} clicked={closed} />
+      <DarkOverlay
+        className="side-drawer__dark-overlay"
+        show={menuOpened}
+        clicked={toggleMenu}
+      />
       <div
         className={classNames(
           "side-drawer",
-          { "side-drawer--open": open },
-          { "side-drawer--close": !open }
+          { "side-drawer--open": menuOpened },
+          { "side-drawer--close": !menuOpened }
         )}
       >
         <Logo className="side-drawer__logo" />

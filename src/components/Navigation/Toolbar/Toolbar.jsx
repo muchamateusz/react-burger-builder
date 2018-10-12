@@ -1,16 +1,20 @@
+// LIBS
 import React from "react";
 import PropTypes from "prop-types";
 
+// APP
 import Logo from "../../../common-components/Logo/Logo";
 import NavigationList from "../NavigationList/NavigationList";
+import MobileMenu from "../../../common-components/MobileMenu/MobileMenu";
 
+// MODULE
 import "./Toolbar.less";
 
-const Toolbar = props => (
+const Toolbar = ({ toggleMenu, menuOpened, ...rest }) => (
   <div className="toolbar">
-    <div>MENU</div>
-      <Logo className="toolbar__logo" />
-      <NavigationList className="toolbar__navigation" />
+    <Logo className="toolbar__logo" />
+    <MobileMenu toggleMenu={toggleMenu} menuOpened={menuOpened} />
+    <NavigationList className="toolbar__navigation" />
   </div>
 );
 

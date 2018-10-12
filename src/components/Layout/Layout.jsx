@@ -15,10 +15,10 @@ const propTypes = {
 
 class Layout extends Component {
   state = {
-    showDarkOverlay: true
+    showDarkOverlay: false
   };
 
-  TurnOffDarkOverlayHandler = () => {
+  updateDarkOverlayStateHandler = () => {
     this.setState(prevState => {
       return { showDarkOverlay: !prevState.showDarkOverlay };
     });
@@ -27,10 +27,13 @@ class Layout extends Component {
   render() {
     return (
       <React.Fragment>
-        <Toolbar />
+        <Toolbar
+          toggleMenu={this.updateDarkOverlayStateHandler}
+          menuOpened={this.state.showDarkOverlay}
+        />
         <SideDrawer
-          closed={this.TurnOffDarkOverlayHandler}
-          open={this.state.showDarkOverlay}
+          toggleMenu={this.updateDarkOverlayStateHandler}
+          menuOpened={this.state.showDarkOverlay}
         />
         <main>{this.props.children}</main>
       </React.Fragment>

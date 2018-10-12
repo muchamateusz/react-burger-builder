@@ -15,16 +15,19 @@
     height: 11%;
     margin-bottom: 10px;
   }
+  &--open {
+    transform: translateX(0);
+  }
+  &--close {
+    transform: translateX(-100%);
+  }
 }
 
 @media(min-width: 500px) {
   .side-drawer {
     display: none;
-    &--open {
-      transform: translateX(0);
-    }
-    &--close {
-      transform: translateX(-100%);
+    &__dark-overlay {
+      display: none;
     }
   }
 }
