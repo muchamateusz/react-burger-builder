@@ -1,3 +1,4 @@
+// LIBS
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
@@ -5,13 +6,17 @@ import fontawesome from "@fortawesome/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
+// APP
+import DarkOverlay from "../DarkOverlay/DarkOverlay";
+
+// MODULE
 import "./Modal.less";
 
 fontawesome.library.add(faTimes);
 
 const Modal = ({ children, showModal, manageModalState, ...rest }) => (
   <React.Fragment>
-    {showModal && <div onClick={manageModalState} className="dark-overlay" />}
+    <DarkOverlay show={showModal} clicked={manageModalState} />
     <div
       className={classNames("modal", { "modal--show": showModal })}
       style={{
