@@ -1,14 +1,14 @@
-// Lib
-import React, { Component } from 'react';
+// LIB
+import React, { PureComponent } from 'react';
 
-// App
+// APP
 import Layout from './components/Layout/Layout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 
-// Local
+// MODULE
 import './App.less';
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <div>

@@ -1,8 +1,13 @@
+// LIBS
 import React from "react";
 import PropTypes from "prop-types";
-import Button from "../../../common-components/Button/Button";
 
+// APP
+import Button from "../../../common/components/Button/Button";
+
+// MODULE
 import "./OrderSummary.less";
+
 const OrderSummary = ({
   ingredients,
   purchaseContinueHandler,
@@ -20,7 +25,9 @@ const OrderSummary = ({
       <h3>Your Order</h3>
       <p>A delicious burger with the following ingredients:</p>
       <ul>{ingredientSummary}</ul>
-      <p>Total Price: <strong>{price.toFixed(2)} PLN</strong></p>
+      <p>
+        Total Price: <strong>{price.toFixed(2)} PLN</strong>
+      </p>
       <p>Continue to order ?</p>
       <div className="order-summary__btns">
         <Button type="cancel" onClick={cancelPurchaseHandler}>
@@ -35,7 +42,9 @@ const OrderSummary = ({
 };
 
 OrderSummary.propTypes = {
-  ingredients: PropTypes.object
+  ingredients: PropTypes.object,
+  purchaseContinueHandler: PropTypes.func,
+  cancelPurchaseHandler: PropTypes.func
 };
 
 export default OrderSummary;

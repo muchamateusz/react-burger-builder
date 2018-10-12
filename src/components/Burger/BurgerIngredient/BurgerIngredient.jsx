@@ -1,6 +1,10 @@
+// LIBS
 import React from "react";
 import PropTypes from "prop-types";
 
+// APP
+
+//MODULE
 import "./BurgerIngredient.less";
 
 const BurgerIngredient = ({ type, ...rest }) => (

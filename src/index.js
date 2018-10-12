@@ -1,8 +1,13 @@
+// LIBS
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
+// APP
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+// MODULE
+import './index.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

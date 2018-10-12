@@ -17,7 +17,7 @@ const NavigationList = ({ className, ...rest }) => (
 );
 
 NavigationList.propTypes = {
-  defaultProp: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default NavigationList;

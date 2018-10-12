@@ -1,7 +1,18 @@
 .order-summary {
   &__btns {
-    padding: 20px 40px;
+    padding: 20px;
     display: flex;
     justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 720px) {
+  .order-summary {
+    &__btns {
+      padding: 20px 0;
+      & .button {
+        width: 100px;
+      }
+    }
   }
 }

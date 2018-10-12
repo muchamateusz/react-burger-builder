@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 // APP
 import BuildControlsItem from "./BuildControlsItem/BuildControlsItem";
-import Button from "../../../common-components/Button/Button";
+import Button from "../../../common/components/Button/Button";
 
 // MODULE
 import "./BuildControls.less";
@@ -32,16 +32,20 @@ const BuildControls = ({
         disabled={disabled[ing]}
       />
     ))}
-    <Button
-      disabled={!purchasable}
-      type="order"
-      onClick={handleOrder}
-    >ORDER NOW</Button>
+    <Button disabled={!purchasable} type="order" onClick={handleOrder}>
+      ORDER NOW
+    </Button>
   </div>
 );
 
 BuildControls.propTypes = {
-  defaultProp: PropTypes.string
+  disabled: PropTypes.bool,
+  purchasable: PropTypes.bool,
+  controls: PropTypes.object,
+  price: PropTypes.number,
+  handleOrder: PropTypes.func,
+  ingredientAdded: PropTypes.func,
+  ingredientRemoved: PropTypes.func
 };
 
 export default BuildControls;

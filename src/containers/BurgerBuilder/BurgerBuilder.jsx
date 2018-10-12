@@ -1,21 +1,16 @@
-import React, { Component } from "react";
+// LIBS
+import React, { PureComponent } from "react";
 
+// APP
+import Modal from "../../common/components/Modal/Modal";
+import { INGREDIENT_PRICES } from "../../common/enums/enums";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
-import Modal from "../../common-components/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 
-const INGREDIENT_PRICES = {
-  salad: 1.5,
-  meat: 15,
-  cheese: 5.5,
-  bacon: 8.3,
-  "bread-middle": 1,
-  "bread-bottom": 1,
-  "bread-top": 1.5
-};
+// MODULE
 
-export default class BurgerBuilder extends Component {
+export default class BurgerBuilder extends PureComponent {
   state = {
     ingredients: {
       salad: 0,

@@ -1,11 +1,12 @@
 // LIBS
 import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 
 // APP
 import NavigationList from "../NavigationList/NavigationList";
-import Logo from "../../../common-components/Logo/Logo";
-import DarkOverlay from "../../../common-components/DarkOverlay/DarkOverlay";
+import Logo from "../../../common/components/Logo/Logo";
+import DarkOverlay from "../../../common/components/DarkOverlay/DarkOverlay";
 
 // MODULE
 import "./SideDrawer.less";
@@ -30,6 +31,11 @@ const SideDrawer = ({ menuOpened, toggleMenu, ...rest }) => {
       </div>
     </React.Fragment>
   );
+};
+
+SideDrawer.propTypes = {
+  toggleMenu: PropTypes.func,
+  menuOpened: PropTypes.bool
 };
 
 export default SideDrawer;

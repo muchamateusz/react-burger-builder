@@ -1,7 +1,11 @@
+// LIBS
 import React from "react";
 import PropTypes from "prop-types";
-import Button from "../../../../common-components/Button/Button";
 
+// APP
+import Button from "../../../../common/components/Button/Button";
+
+// MODULE
 import "./BuildControlsItem.less";
 
 const BuildControlsItem = ({ label, added, removed, disabled, ...rest }) => {
@@ -19,6 +23,9 @@ const BuildControlsItem = ({ label, added, removed, disabled, ...rest }) => {
 };
 
 BuildControlsItem.propTypes = {
-  label: PropTypes.string
+  label: PropTypes.string,
+  added: PropTypes.func,
+  removed: PropTypes.func,
+  disabled: PropTypes.bool
 };
 export default BuildControlsItem;

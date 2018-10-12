@@ -11,7 +11,9 @@ const DarkOverlay = ({ show, clicked, className, ...rest }) =>
   );
 
 DarkOverlay.propTypes = {
-  defaultProp: PropTypes.string
+  show: PropTypes.bool,
+  clicked: PropTypes.func,
+  className: PropTypes.string
 };
 
 export default DarkOverlay;

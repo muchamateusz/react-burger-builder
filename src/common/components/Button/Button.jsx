@@ -1,7 +1,11 @@
+// LIBS
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
+// APP
+
+// MODULE
 import "./Button.less";
 
 const Button = ({
@@ -28,7 +32,7 @@ const Button = ({
 
 Button.propTypes = {
   className: PropTypes.string,
-  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
   type: PropTypes.string,
   children: PropTypes.any
 };

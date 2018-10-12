@@ -3,9 +3,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // APP
-import Logo from "../../../common-components/Logo/Logo";
+import Logo from "../../../common/components/Logo/Logo";
 import NavigationList from "../NavigationList/NavigationList";
-import MobileMenu from "../../../common-components/MobileMenu/MobileMenu";
+import MobileMenu from "../../../common/components/MobileMenu/MobileMenu";
 
 // MODULE
 import "./Toolbar.less";
@@ -19,7 +19,8 @@ const Toolbar = ({ toggleMenu, menuOpened, ...rest }) => (
 );
 
 Toolbar.propTypes = {
-  defaultProp: PropTypes.string
+  toggleMenu: PropTypes.func,
+  menuOpened: PropTypes.bool
 };
 
 export default Toolbar;

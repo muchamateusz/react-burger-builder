@@ -1,19 +1,15 @@
-// Lib
-import React, { Component } from "react";
+// LIB
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import Toolbar from "../Navigation/Toolbar/Toolbar";
 
-// App
+// APP
 import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
 
-// Local
+// MODULE
 import "./Layout.less";
 
-const propTypes = {
-  children: PropTypes.any
-};
-
-class Layout extends Component {
+class Layout extends PureComponent {
   state = {
     showDarkOverlay: false
   };
@@ -41,5 +37,7 @@ class Layout extends Component {
   }
 }
 
-Layout.propTypes = propTypes;
+Layout.propTypes = {
+  children: PropTypes.any
+};
 export default Layout;

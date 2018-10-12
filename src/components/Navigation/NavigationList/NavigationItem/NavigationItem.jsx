@@ -12,7 +12,9 @@ const NavigationItem = ({ link, active, children, ...rest }) => (
 );
 
 NavigationItem.propTypes = {
-  defaultProp: PropTypes.string,
+  link: PropTypes.string,
+  active: PropTypes.bool,
+  children: PropTypes.any,
 };
 
 export default NavigationItem;
