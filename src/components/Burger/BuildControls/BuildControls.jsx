@@ -39,9 +39,9 @@ const BuildControls = ({
 );
 
 BuildControls.propTypes = {
-  disabled: PropTypes.bool,
+  disabled: PropTypes.object,
   purchasable: PropTypes.bool,
-  controls: PropTypes.object,
+  controls: PropTypes.array,
   price: PropTypes.number,
   handleOrder: PropTypes.func,
   ingredientAdded: PropTypes.func,

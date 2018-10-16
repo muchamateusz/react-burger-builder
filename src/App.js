@@ -1,12 +1,12 @@
 // LIB
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from "react";
 
 // APP
-import Layout from './components/Layout/Layout';
-import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
+import Layout from "./components/Layout/Layout";
+import BurgerBuilder from "./containers/BurgerBuilder/BurgerBuilder";
 
 // MODULE
-import './App.less';
+import "./App.less";
 
 class App extends PureComponent {
   render() {

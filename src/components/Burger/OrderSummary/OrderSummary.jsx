@@ -21,7 +21,7 @@ const OrderSummary = ({
     }`}</li>
   ));
   return (
-    <React.Fragment>
+    <div className="order-summary">
       <h3>Your Order</h3>
       <p>A delicious burger with the following ingredients:</p>
       <ul>{ingredientSummary}</ul>
@@ -37,7 +37,7 @@ const OrderSummary = ({
           CONTINUE
         </Button>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

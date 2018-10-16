@@ -11,7 +11,7 @@ const DarkOverlay = ({ show, clicked, className, ...rest }) =>
   );
 
 DarkOverlay.propTypes = {
-  show: PropTypes.bool,
+  show: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
   clicked: PropTypes.func,
   className: PropTypes.string
 };
