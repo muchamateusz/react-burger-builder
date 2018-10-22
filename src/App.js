@@ -1,9 +1,11 @@
 // LIB
 import React, { PureComponent } from "react";
+import { Route, Switch } from "react-router-dom";
 
 // APP
 import Layout from "./components/Layout/Layout";
 import BurgerBuilder from "./containers/BurgerBuilder/BurgerBuilder";
+import Checkout from "./containers/Checkout/Checkout";
 
 // MODULE
 import "./App.less";
@@ -13,7 +15,10 @@ class App extends PureComponent {
     return (
       <div>
         <Layout>
-          <BurgerBuilder />
+          <Switch>
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/" exact component={BurgerBuilder} />
+          </Switch>
         </Layout>
       </div>
     );

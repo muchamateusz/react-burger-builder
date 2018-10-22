@@ -12,7 +12,7 @@ import './NavigationList.less';
 const NavigationList = ({ className, ...rest }) => (
   <ul className={classNames("navigation-list", className)}>
     <NavigationItem link="/" active>Burger Builder</NavigationItem>
-    <NavigationItem link="/">Checkout</NavigationItem>
+    <NavigationItem link="/checkout">Checkout</NavigationItem>
   </ul>
 );
 
