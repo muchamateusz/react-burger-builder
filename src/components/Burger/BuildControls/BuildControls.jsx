@@ -20,9 +20,6 @@ const BuildControls = ({
   ...rest
 }) => (
   <div className="build-controls">
-    <p>
-      Total price: <strong>{price.toFixed(2)}</strong> PLN
-    </p>
     {controls.map((ing, index) => (
       <BuildControlsItem
         key={ing + index}
@@ -32,6 +29,9 @@ const BuildControls = ({
         disabled={disabled[ing]}
       />
     ))}
+    <p>
+      Total price: <strong>{price.toFixed(2)}</strong> PLN
+    </p>
     <Button disabled={!purchasable} type="order" onClick={handleOrder}>
       ORDER NOW
     </Button>

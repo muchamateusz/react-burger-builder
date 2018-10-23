@@ -1,6 +1,5 @@
 .button {
   cursor: pointer;
-  color: white;
   &--default {
     color: black;
     display: block;
@@ -20,7 +19,6 @@
     background-color: #00ff8098;
     color: black;
     width: 160px;
-    height: 40px;
     display: block;
     font: inherit;
     padding: 5px;
@@ -28,7 +26,8 @@
     border: 1px solid #00ff8098;
     outline: none;
     border-radius: 15px;
-    box-shadow: 0px 0px 10px grey;
+    box-shadow: 0px 0px 15px black;
+    transition: box-shadow 0.1s ease;
     &:hover {
       box-shadow: none;
       background-color: #00ff8098;
@@ -37,11 +36,11 @@
   }
   &--cancel {
     background-color: rgba(216, 0, 0, 0.7);
-    font-weight: bold;
     width: 120px;
     height:25px;
     border: none;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 15px black;
+    transition: box-shadow 0.1s ease;
     border-radius: 10px;
     &:hover {
       box-shadow: none;
@@ -49,12 +48,12 @@
     }
   }
   &--continue {
-    background-color: rgba(0, 158, 0, 0.7);
-    font-weight: bold;
+    background-color: #00ff8098;
     width: 120px;
     height:25px;
     border: none;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 15px black;
+    transition: box-shadow 0.1s ease;
     border-radius: 10px;
     &:hover {
       box-shadow: none;

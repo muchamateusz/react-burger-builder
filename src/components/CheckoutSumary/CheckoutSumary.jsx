@@ -12,12 +12,14 @@ const CheckoutSummary = props => {
       <div style={{ width: "100%", margin: "auto" }}>
         <Burger ingredients={props.ingredients} />
       </div>
+      <div className="checkout-summary__btns-wrapper">
       <Button type="cancel" onClick={() => props.checkoutCancelled()}>
         CANCEL
       </Button>
       <Button type="continue" onClick={() => props.checkoutContinued()}>
         CONTINUE
       </Button>
+      </div>
     </div>
   );
 };
