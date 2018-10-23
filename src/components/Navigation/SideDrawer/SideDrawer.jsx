@@ -5,8 +5,8 @@ import classNames from "classnames";
 
 // APP
 import NavigationList from "../NavigationList/NavigationList";
-import Logo from "../../../common/components/Logo/Logo";
-import DarkOverlay from "../../../common/components/DarkOverlay/DarkOverlay";
+import Logo from "common-components/Logo/Logo";
+import DarkOverlay from "common-components/DarkOverlay/DarkOverlay";
 
 // MODULE
 import "./SideDrawer.less";

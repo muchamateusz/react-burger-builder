@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // APP
-import Button from "../../../common/components/Button/Button";
+import Button from "common-components/Button/Button";
 
 // MODULE
 import "./OrderSummary.less";

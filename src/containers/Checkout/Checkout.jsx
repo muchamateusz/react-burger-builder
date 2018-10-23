@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, withRouter } from "react-router-dom";
-import CheckoutSummary from "../../components/CheckoutSumary/CheckoutSumary";
+import CheckoutSummary from "components/CheckoutSumary/CheckoutSumary";
 import ContactData from "./ContactData/ContactData";
 
 class Checkout extends Component {

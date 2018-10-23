@@ -1,7 +1,7 @@
 import React from "react";
 
 import Burger from "../Burger/Burger";
-import Button from "../../common/components/Button/Button";
+import Button from "common-components/Button/Button";
 
 import "./CheckoutSumary.less";
 

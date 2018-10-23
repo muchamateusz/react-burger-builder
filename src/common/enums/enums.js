@@ -7,3 +7,9 @@ export const INGREDIENT_PRICES = {
   "bread-bottom": 1,
   "bread-top": 1.5
 };
+
+export const URLS_TO_HEADERS = {
+  "/": "Burger Builder",
+  "/checkout": "Checkout",
+  "/checkout/contact-data": "Checkout + Contact Data"
+};

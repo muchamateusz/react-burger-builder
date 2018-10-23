@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Button from "../../../common/components/Button/Button";
+import Button from "common-components/Button/Button";
 
 import "./ContactData.less";
 

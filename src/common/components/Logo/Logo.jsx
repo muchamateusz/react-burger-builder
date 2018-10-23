@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 // APP
-import logoImg from "../../../assets/burgerlogo.png";
+import logoImg from "assets/burgerlogo.png";
 
 // MODULE
 import "./Logo.less";

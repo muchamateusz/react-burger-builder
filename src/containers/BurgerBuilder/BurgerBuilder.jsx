@@ -2,14 +2,14 @@
 import React, { PureComponent } from "react";
 
 // APP
-import Modal from "../../common/components/Modal/Modal";
-import { INGREDIENT_PRICES } from "../../common/enums/enums";
-import Burger from "../../components/Burger/Burger";
-import BuildControls from "../../components/Burger/BuildControls/BuildControls";
-import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
-import axios from "../../Axios.config";
-import Spinner from "../../common/components/Spinner/Spinner";
-import withErrorHandler from "../../common/withErrorHandling";
+import Modal from "common-components/Modal/Modal";
+import { INGREDIENT_PRICES } from "common-enums/enums";
+import Burger from "components/Burger/Burger";
+import BuildControls from "components/Burger/BuildControls/BuildControls";
+import OrderSummary from "components/Burger/OrderSummary/OrderSummary";
+import axios from "src/Axios.config";
+import Spinner from "common-components/Spinner/Spinner";
+import withErrorHandler from "common/withErrorHandling";
 
 // MODULE
 

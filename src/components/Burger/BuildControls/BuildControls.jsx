@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 // APP
 import BuildControlsItem from "./BuildControlsItem/BuildControlsItem";
-import Button from "../../../common/components/Button/Button";
+import Button from "common-components/Button/Button";
 
 // MODULE
 import "./BuildControls.less";
