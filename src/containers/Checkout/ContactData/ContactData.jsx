@@ -36,7 +36,9 @@ class ContactData extends Component {
             name="postalCode"
             placeholder="Your postalCode"
           />
-          <Button type="continue">ORDER</Button>
+          <Button className="contact-data__btn" type="continue">
+            ORDER
+          </Button>
         </form>
       </div>
     );
