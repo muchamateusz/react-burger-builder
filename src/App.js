@@ -1,5 +1,5 @@
 // LIB
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
 // APP
@@ -10,7 +10,7 @@ import Checkout from "./containers/Checkout/Checkout";
 // MODULE
 import "./App.less";
 
-class App extends PureComponent {
+class App extends Component {
   render() {
     return (
       <div>

@@ -7,10 +7,6 @@ class Checkout extends Component {
   state = {
     ingredients: {}
   };
-  shouldComponentUpdate() {
-    debugger;
-    return true;
-  }
   componentDidMount() {
     const query = new URLSearchParams(this.props.location.search);
     const ingredients = {};
