@@ -1,6 +1,6 @@
 // LIB
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { PureComponent } from "react";
+import { Route, Switch, withRouter } from "react-router-dom";
 
 // APP
 import Layout from "./components/Layout/Layout";
@@ -10,7 +10,7 @@ import Checkout from "./containers/Checkout/Checkout";
 // MODULE
 import "./App.less";
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <div>
@@ -25,4 +25,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
