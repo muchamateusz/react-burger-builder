@@ -9,10 +9,11 @@ import NavigationItem from './NavigationItem/NavigationItem';
 // MODULE
 import './NavigationList.less';
 
-const NavigationList = ({ className, ...rest }) => (
+const NavigationList = ({ className, hide, ...rest }) => (
   <ul className={classNames("navigation-list", className)}>
-    <NavigationItem link="/" active>Burger Builder</NavigationItem>
+    <NavigationItem link="/">Burger Builder</NavigationItem>
     <NavigationItem link="/checkout">Checkout</NavigationItem>
+    <NavigationItem link="/orders">Orders</NavigationItem>
   </ul>
 );
 

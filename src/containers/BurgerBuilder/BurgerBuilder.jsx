@@ -108,28 +108,28 @@ class BurgerBuilder extends PureComponent {
 
   purchaseContinueHandler = () => {
     this.setState({ loading: true });
-    // const order = {
-    //   ingredients: ings,
-    //   price: this.state.totalPrice,
-    //   customer: {
-    //     name: "Mati Mucha",
-    //     address: {
-    //       street: "Lagowska 1",
-    //       zipCode: "01-565",
-    //       country: "Poland"
-    //     },
-    //     email: "mucha@gmail.com"
-    //   },
-    //   deliveryMethod: "fastest"
-    // };
-    // axios
-    //   .post("/orders.json", order)
-    //   .then(resp => {
-    //     this.setState({ loading: false, showModal: false });
-    //   })
-    //   .catch(err => {
-    //     this.setState({ loading: false, showModal: false });
-    //   });
+    const order = {
+      ingredients: this.state.ingredients,
+      price: this.state.totalPrice,
+      customer: {
+        name: "Mati Mucha",
+        address: {
+          street: "Lagowska 1",
+          zipCode: "01-565",
+          country: "Poland"
+        },
+        email: "mucha@gmail.com"
+      },
+      deliveryMethod: "fastest"
+    };
+    axios
+      .post("/orders.json", order)
+      .then(resp => {
+        this.setState({ loading: false, showModal: false });
+      })
+      .catch(err => {
+        this.setState({ loading: false, showModal: false });
+      });
     console.log(this.state);
     const queryParams = [];
     for (let i in this.state.ingredients) {
@@ -139,7 +139,7 @@ class BurgerBuilder extends PureComponent {
         )}`
       );
     }
-    const queryString = queryParams.join('&');
+    const queryString = queryParams.join("&");
     this.props.history.push({
       pathname: `/checkout`,
       search: `?${queryString}`
@@ -166,7 +166,6 @@ class BurgerBuilder extends PureComponent {
         />
       );
     }
-
     if (this.state.ingredients) {
       burger = (
         <React.Fragment>

@@ -1,14 +1,19 @@
+.side-drawer--open .navigation-list {
+  display: flex;
+}
+
 .navigation-list {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
   flex-direction: column;
   align-items: center;
+  display: none;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .navigation-list {
+    display: flex;
     flex-direction: row;
   }
 }

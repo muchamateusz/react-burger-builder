@@ -11,5 +11,6 @@ export const INGREDIENT_PRICES = {
 export const URLS_TO_HEADERS = {
   "/": "Burger Builder",
   "/checkout": "Checkout",
+  "/orders": "Orders",
   "/checkout/contact-data": "Checkout + Contact Data"
 };

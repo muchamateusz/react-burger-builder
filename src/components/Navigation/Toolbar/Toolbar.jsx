@@ -6,6 +6,7 @@ import { withRouter } from "react-router-dom";
 // APP
 import Logo from "common-components/Logo/Logo";
 import MobileMenu from "common-components/MobileMenu/MobileMenu";
+import NavigationList from "../NavigationList/NavigationList";
 import { URLS_TO_HEADERS } from "common-enums/enums";
 
 // MODULE
@@ -24,6 +25,7 @@ const Toolbar = ({
         {URLS_TO_HEADERS[history.location.pathname]}
       </div>
       <Logo className="toolbar__logo" />
+      <NavigationList />
       <MobileMenu toggleMenu={toggleMenu} menuOpened={menuOpened} />
     </div>
   );

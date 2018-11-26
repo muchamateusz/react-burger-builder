@@ -3,14 +3,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
-
 // MODULE
 import "./NavigationItem.less";
 
 const NavigationItem = ({ link, active, children, ...rest }) => {
   return (
     <li className="navigation-item">
-      <NavLink to={link} activeClassName={active && "navigation-item--active"}>
+      <NavLink exact to={link} activeClassName="navigation-item--active">
         {children}
       </NavLink>
     </li>
